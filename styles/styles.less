@@ -1,0 +1,464 @@
+@import 'palette.less';
+/*
+
+File Name: style.css
+Programmer: Amanda Stewart
+
+*/
+/* ---------------------------------------------MOBILE STYLESHEET---------------------------------------------------- */
+body {
+  background-color:  @lightColor;
+  height: 100%;
+  padding-bottom: 1em;
+}
+header {
+  background-color: @color1;
+  color: @lightColor;
+  width: 100%;
+  height: 13.75em;
+  padding: .75em;
+  line-height: 1.75em;
+  h1{
+    color: @lightColor;
+  }
+  h2{
+    color: @lightColor;
+  }
+}
+#title {
+  padding: 0.5em;
+  margin-top: 0.5em;
+}
+#slogan {
+  font-style: italic;
+  margin-left: 2.75em;
+  float: left;
+  color: @lightColor;
+}
+#logo {
+  float: left;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: auto;
+}
+main {
+  padding: 0.5em;
+  line-height: 1.5em;
+}
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9em;
+  color: #000000;
+  font-weight: bolder;
+}
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  font-weight: bolder;
+  color: #000000;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9em;
+  font-weight: bolder;
+  color: #000000;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+p{
+  font-family: 'Exo', sans-serif;
+  font-size: 0.9em;
+  color: #000000;
+  margin-bottom: 1em;
+  text-indent: 1em;
+}
+footer {
+  font-family: 'Exo', sans-serif;
+  color: #FFFFFF;
+  background-color: #ff0000;
+  width: 100%;
+  height: 5em;
+  padding-top: 1.5em;
+  text-align: center;
+  p, a{
+    color: @lightColor;
+  }
+}
+table{
+  font-family: 'Exo', sans-serif;
+  font-size: 0.9em;
+}
+td{
+  padding: .75em;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+#page-container {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+/* Style the Feature Area */
+#feature {
+  padding: 0.5em;
+}
+/* Style the Weather Widget */
+#weather {
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+/* Style the Social Media Widget Section */
+#social {
+  border: 1px solid black;
+  box-sizing: border-box;
+  height: 38em;
+  padding: 2em;
+}
+form{
+  font-family: 'Exo', sans-serif;
+  font-size: .9em;
+}
+label{
+  font-weight: bold;
+}
+span{
+  text-decoration: underline;
+  font-weight: bold;
+}
+#faq{
+  font-weight: bold;
+}
+/* Hide the link that should open and close the topnav on small screens */
+.icon {
+  display: none;
+}
+#cost{
+  margin-left: 3em;
+}
+/* ------------------Universal Style for Forms--------------------- */
+#honeypot {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
+}
+/* Style the Registration Page */
+#registration {
+  font-family: 'Exo', sans-serif;
+  line-height: 1em;
+}
+/* Style the Contact Page */
+#contact {
+  font-family: 'Exo', sans-serif;
+  margin: 0.75em;
+  line-height: 3em;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: @color1;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+/*  -------------------------------------- Mobile View Specific --------------------------------------------------  */
+@media only screen and (max-width: 480px) {
+
+  /* When the screen is less than 600 pixels wide, hide all links. Show the link that contains should open and close the topnav (.icon) */
+  .topnav a {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .active {
+    background-color: @color1;
+    color: black;
+  }
+
+  #feature {
+    width: 100%;
+  }
+  #weather {
+    width: 100%;
+  }
+  #social {
+    width: 100%;
+    height: 35em;
+    padding-left: 2.5em;
+  }
+  .slideshow-container{
+    display: none;
+  }
+  .event_mobile{
+    display: block;
+  }
+}
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media only screen and (max-width: 479px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+  }
+}
+
+/* --------------------------------------------TABLET STYLESHEET-------------------------------------------------------
+The following CSS affects all screen sizes larger than 480 pixels wide */
+@media only screen and (min-width: 480px) {
+  /* Add a black background color to the top navigation */
+
+  header {
+    height: 13.5em;
+    line-height: 2em;
+    font-size: 1.25em;
+    margin-top: 1em;
+  }
+  #logo {
+    margin-left: 1em;
+  }
+  #title {
+    padding-left: 3em;
+    margin-left: 9em;
+  }
+  #slogan {
+    margin-left: 5em;
+    margin-top: 0.5em;
+  }
+
+  h1 {
+    font-size: 1.6em;
+    line-height: 1em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3{
+    font-size: 1.25em;
+  }
+  #feature {
+    width: 60%;
+    float: left;
+    padding: 2em;
+  }
+  /* Style the Weather Section */
+  #weather {
+    width: 40%;
+    float: left;
+  }
+  /* Style the Social Media Section */
+  #social {
+    width: 40%;
+    float: right;
+    padding-left: 2em;
+  }
+  #start{
+    margin: 1em;
+  }
+  #cost{
+    margin-left: 5em;
+  }
+  #register{
+    float: left;
+    padding-top: 0.5em;
+  }
+  #columnOne{
+    float: left;
+    width: 50%;
+  }
+  #columnTwo{
+    float: right;
+    width: 50%;
+  }
+  form{
+    font-size: 1em;
+  }
+  label {
+    margin: 1em;
+  }
+  table{
+    margin-left: 3em;
+  }
+  td{
+    padding: 0.5em;
+  }
+  th{
+    font-weight: bold;
+    padding-right: 0.75em;
+  }
+  .event_mobile{
+    display: none;
+  }
+  .topnav a{
+    font-size: 1em;
+    padding: 0.65em;
+  }
+  /* --------------------------------------- JS Slideshow ----------------------------------------------------------  */
+  .slideshow-container {
+    max-width: 60%;
+    margin-left: 4em;
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    float: left;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    max-width: 60%;
+    float: right;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #000000;
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+}
+/* -----------------------Desktop Stylesheet--------------------------- */
+/*The following CSS affects all screen sizes larger than 1024 pixels wide */
+@media only screen and (min-width: 992px) {
+  h1{
+    font-size: 2em;
+    line-height: 1.5em;
+    padding-left: 1em;
+  }
+  h2{
+    font-size: 1.5em;
+  }
+  h3{
+    padding-top: 1em;
+  }
+  .topnav a{
+    font-size: 1.5em;
+    padding: 0.5em 1em;
+  }
+  .slideshow-container{
+    margin-left: 6em;
+  }
+  .directions{
+    margin-left: 1.3em;
+    text-indent: unset;
+  }
+  #logo{
+    margin-top: 1em;
+    margin-left: 2em;
+  }
+  #title{
+    padding-left: 0;
+  }
+  #start{
+    margin-left: 8em;
+  }
+  #cost{
+    margin-left: 8em;
+  }
+  #registration{
+    margin-left: 5em;
+  }
+  #contact{
+    margin-left: 8em;
+  }
+  #social{
+    padding-left: 5em;
+  }
+  td{
+    padding-left: 2em;
+    padding-right: 3em;
+  }
+  li{
+    padding-top: 0.75em;
+  }
+}
